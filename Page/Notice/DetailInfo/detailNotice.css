@@ -1,0 +1,40 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    }
+    body {
+      font-size: 14px;
+    }
+
+    .titleNotice {
+        color: #000;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        position: absolute;
+        top: 70px;
+        left: 40px;
+    }
+    .img_writer_tag {
+        width: 15px;
+        height: 15px;
+        background: url("../resource/writer.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        top: 130px;
+        left: 40px;
+    }
+    .titleNoticeInfo {
+        color: #000;
+        font-size: 15px;
+        line-height: normal;
+        position: relative;
+        top: 115px;
+        left: 70px;
+    }
+
+    
