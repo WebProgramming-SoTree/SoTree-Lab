@@ -1,83 +1,68 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
 }
 
-header {
-  background: #363636;
-  width: 100%;
-  height: 66px;
-  flex-shrink: 0;
-  padding: 0;
-  margin: 0;
+#header {
   display: flex;
+  width: 100%;
+  height: auto;
+  padding: 20px 165px;
+  margin: 0;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-end;
-}
-
-.text {
-  color: #ffffff;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 0;
-}
-
-.text ul ul {
-  display: none;
-}
-
-.text ul li:hover > ul {
-  display: inherit;
+  gap: auto;
 }
 
 nav ul {
   list-style: none;
+  padding: 0;
   margin: 0;
-  padding-left: 50px;
-  padding-right: 50px;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 20px;
-}
-
-nav ul li {
-  margin-right: 20px;
-}
-
-nav ul li:hover {
-  color: #c6ffc9;
-}
-
-nav a {
-  display: flex;
-  align-items: center;
+  gap: 64px;
   justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+nav li:hover .sub {
+  display: flex;
+}
+
+a {
+  color: #8b8b91;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
   text-decoration: none;
-  color: #ffffff;
+}
+a:hover {
+  color: #b5e29d;
 }
 
 .sub {
-  width: auto;
-  height: 61px;
-  padding: 0 50px; /* padding 속성 수정 */
-  margin: 0;
-  gap: 44px;
-  border-radius: 25px;
-  background: #616161;
+  display: none;
   position: absolute;
-  top: 50px;
+  padding: 0px 38px;
+  width: auto;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  border: 3px solid #b5e29d;
+  align-items: center;
+}
+
+#login {
   display: flex;
-}
-
-.sub li {
-  text-align: center;
-  gap: 44px;
-}
-
-.sub a {
-  display: block;
+  width: auto;
+  height: auto;
+  padding: 16px 32px;
+  border-radius: 100px;
+  background: #8cdb63;
 }
