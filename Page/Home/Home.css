@@ -1,83 +1,180 @@
+:root {
+  --grey-scaleblack-50: rgba(25, 24, 37, 0.5);
+}
 body {
   margin: 0;
+  padding: 0;
 }
-.darkBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 810px;
-  background: #363636;
+.frame {
+  position: relative;
+  width: 1512px;
+  height: 847px;
 }
 
-.lightBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 810px;
-  background: #ffffff;
+.frame .rectangle {
+  position: absolute;
+  width: 1520px;
+  height: 320px;
+  top: 790px;
+  left: -4px;
+  background-color: #dcf3cf;
 }
 
-.gird {
+.frame .overlap-group {
+  position: absolute;
+  width: 1501px;
+  height: 743px;
+  top: 0;
+  left: 0;
+}
+
+.frame .group {
+  position: absolute;
+  width: 1407px;
+  height: 743px;
+  top: 0;
+  left: 0;
+}
+
+.frame .div {
+  position: absolute;
+  width: 705px;
+  height: 550px;
+  top: 176px;
+  left: 0;
+  background-color: #cdecbb;
+  border-radius: 0px 500px 500px 0px;
+}
+
+.frame .ellipse {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 55px;
+  left: 572px;
+}
+
+.frame .ellipse-2 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 93px;
+  border-radius: 20px;
+  filter: blur(4px);
+  background: linear-gradient(
+    180deg,
+    rgb(111, 212, 138) 0%,
+    rgb(127, 186, 96) 100%
+  );
+}
+
+.frame .ellipse-3 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 247px;
+  left: 735px;
+  background-color: #cdecbb;
+  border-radius: 20px;
+  filter: blur(4px);
+}
+
+.frame .ellipse-4 {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 628px;
+  left: 1375px;
+  background-color: #b5df9e;
+  border-radius: 16px;
+  filter: blur(4px);
+}
+
+.frame .frame-wrapper {
   display: flex;
   flex-direction: column;
+  width: 634px;
+  align-items: flex-start;
+  gap: 91.16px;
+  position: absolute;
+  top: 180px;
+  left: 867px;
 }
-.sotree {
-  line-height: 0;
-  margin-top: 209px;
-  font-family: Inter;
-  font-size: 128px;
-  font-style: normal;
+
+.frame .div-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 45.58px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .div-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22.79px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.frame .text-wrapper {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.42px;
+  font-family: "Noto Sans KR-Bold", Helvetica;
   font-weight: 700;
-  line-height: normal;
-  background: linear-gradient(90deg, #9fdaaf 0%, #f5f69e 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #7bce5a;
+  font-size: 85.5px;
+  letter-spacing: 0;
+  line-height: 102.6px;
 }
 
-.text {
-  color: #fff;
-  font-family: Inter;
-  font-size: 36px;
-  font-style: normal;
+.frame .p {
+  position: relative;
+  align-self: stretch;
+  font-family: "Inter-Regular", Helvetica;
   font-weight: 400;
-  line-height: normal;
+  color: var(--grey-scaleblack-50);
+  font-size: 25.6px;
+  letter-spacing: 0;
+  line-height: 41px;
 }
 
-.title {
-  margin-top: 80px;
-  color: #000;
-  font-family: Inter;
-  font-size: 96px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  line-height: 0;
+.frame .element {
+  position: absolute;
+  width: 631px;
+  height: 637px;
+  top: 40px;
+  left: 26px;
+  object-fit: cover;
 }
 
 .apply {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 419px;
-  height: 108px;
-  flex-shrink: 0;
+  align-items: center;
+  position: absolute;
+  width: 234px;
+  height: 73px;
+  top: 489px;
+  left: 867px;
+  background-color: #8cdb63;
   border-radius: 50px;
-  background: #9fdaaf;
-  margin-top: 171px;
+  font-family: "Noto Sans KR-Black", Helvetica;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: 33.6px;
 }
 
 .apply:hover {
-  background: #83ba92;
-}
-
-.image {
-  width: 872px;
-  height: 580px;
-  flex-shrink: 0;
-  border-radius: 25px;
-  background: url(<path-to-image>), lightgray 50% / cover no-repeat, #fff;
-  box-shadow: 25px 25px 10px 0px rgba(0, 0, 0, 0.25);
+  background: #6cb845;
 }

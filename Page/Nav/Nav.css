@@ -1,9 +1,10 @@
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
-#header {
+header {
+  box-sizing: border-box;
   display: flex;
   width: 100%;
   height: auto;
@@ -11,10 +12,8 @@ body {
   margin: 0;
   justify-content: space-between;
   align-items: center;
-  gap: auto;
 }
-
-nav ul {
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -24,13 +23,13 @@ nav ul {
   align-items: center;
 }
 
-nav li {
+ul li {
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-nav li:hover .sub {
+ul li:hover .sub {
   display: flex;
 }
 
@@ -41,6 +40,7 @@ a {
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+  display: block;
 }
 a:hover {
   color: #b5e29d;
@@ -50,6 +50,7 @@ a:hover {
   display: none;
   position: absolute;
   padding: 0px 38px;
+  top: 30px;
   width: auto;
   height: 50px;
   flex-shrink: 0;
@@ -65,4 +66,14 @@ a:hover {
   padding: 16px 32px;
   border-radius: 100px;
   background: #8cdb63;
+  color: #fff;
+  font-family: Noto Sans KR;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 120%;
+}
+
+#login:hover {
+  background: #6cb845;
 }
