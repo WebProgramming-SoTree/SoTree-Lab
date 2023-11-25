@@ -27,10 +27,12 @@ ul li {
   position: relative;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 ul li:hover .sub {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 a {
@@ -47,16 +49,20 @@ a:hover {
 }
 
 .sub {
-  display: none;
   position: absolute;
   padding: 0px 38px;
-  top: 30px;
-  width: auto;
+  width: max-content;
   height: 50px;
   flex-shrink: 0;
   border-radius: 50px;
   border: 3px solid #b5e29d;
   align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
 }
 
 #login {
