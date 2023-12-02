@@ -1,0 +1,58 @@
+@charset "UTF-8";
+body{
+	padding:0;
+	margin:0;
+}
+.frame-wrapper{
+	width: 100%;
+height: auto;
+margin:0;
+background:#E3E3E3;
+display:flex;
+align-items: center;
+justify-content: center;
+padding:25px;
+}
+.frame-wrapper .frame{
+	width: 100%;
+height: auto;
+flex-shrink: 0;
+margin:0;
+border-radius: 50px;
+background: #FFF;
+padding:100px 400px;
+display:flex;
+flex-direction: column;
+align-items: center;
+gap:50px;
+}
+
+.frame .apply{
+	color: #8B8B91;
+font-family: Noto Sans KR;
+font-size: 64px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-align: center;
+margin-bottom:50px;
+}
+
+.frame .form{
+width: auto;
+height: auto;
+flex-shrink: 0;
+color: #8B8B91;
+font-family: Noto Sans KR;
+font-size: 25px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;	
+text-align: center;
+}
+
+.frame .form .input{
+width: 250px;
+height: 30px;
+flex-shrink: 0;
+}
