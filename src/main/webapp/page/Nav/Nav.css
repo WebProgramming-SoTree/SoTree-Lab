@@ -1,0 +1,132 @@
+
+body {
+  padding: 0;
+  margin: 0;
+  width:100%;
+}
+
+.header {
+  display: inline-flex;
+  width: 100%;
+  height: auto;
+  padding: 20px 165px;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-bar{
+	display:inline-flex;
+	align-items:center;
+}
+
+.menu-bar ul {
+  list-style: none;
+  padding: 0;
+  margin:0;
+  gap:50px;
+  display: inline-flex;
+  align-items:center;
+}
+
+.menu-bar ul li{
+  cursor: pointer;
+  margin-top:15px;
+  margin-bottom:15px;
+  padding:0;
+  position:relative;
+  display:inline-flex;
+}
+
+.menu-bar ul li a {
+  color: #8b8b91;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  text-align: center;
+}
+.menu-bar ul li a:hover{
+	color: #b5e29d;
+}
+
+.header .menu-bar .sub-menu{
+  position:absolute;
+  height: auto;
+  width:auto;
+  padding:0px 20px;
+  width:max-content;
+  border-radius: 50px;
+  border: 2px solid #b5e29d;
+  top:60px;
+ left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1;
+  background-color:#ffffff;
+}
+
+.sub-menu ul {
+  list-style: none;
+  margin: 0;
+  padding:0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:0;
+}
+
+.sub-menu ul li{
+  cursor: pointer;
+  margin:0px;
+  padding:15px 20px;
+
+}
+
+.sub-menu ul li a {
+  color: #8b8b91;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  text-align: center;
+  display:flex;
+  align-items: center;
+}
+.sub-menu ul li a:hover{
+	color: #b5e29d;
+	
+}
+.menu-bar ul li:hover .sub-menu{
+    opacity: 1;
+    visibility: visible;		
+
+}
+
+#login {
+  display: flex;
+  width: auto;
+  height: auto;
+  padding: 16px 32px;
+  border-radius: 100px;
+  background: #8cdb63;
+  color: #fff;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 120%;
+}
+
+#login:hover {
+  background: #6cb845;
+}
+.logo{
+	width:50px;
+	height:50px;
+}
+* {
+  box-sizing: border-box;
+}

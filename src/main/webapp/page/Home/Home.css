@@ -1,43 +1,25 @@
 :root {
   --grey-scaleblack-50: rgba(25, 24, 37, 0.5);
 }
-body {
-  margin: 0;
-  padding: 0;
-}
 .frame {
-  position: relative;
-  width: 1512px;
+  width: 100%;
   height: 847px;
-}
-
-.frame .rectangle {
-  position: absolute;
-  width: 1520px;
-  height: 320px;
-  top: 790px;
-  left: -4px;
-  background-color: #dcf3cf;
+  display:flex;
 }
 
 .frame .overlap-group {
-  position: absolute;
-  width: 1501px;
+  width: 100%;
   height: 743px;
-  top: 0;
-  left: 0;
 }
 
 .frame .group {
-  position: absolute;
-  width: 1407px;
+  width: 100%;
   height: 743px;
   top: 0;
   left: 0;
 }
 
-.frame .div {
-  position: absolute;
+.frame .rectangle {
   width: 705px;
   height: 550px;
   top: 176px;
@@ -54,7 +36,7 @@ body {
   left: 572px;
 }
 
-.frame .ellipse-2 {
+.frame .div {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -62,14 +44,10 @@ body {
   left: 93px;
   border-radius: 20px;
   filter: blur(4px);
-  background: linear-gradient(
-    180deg,
-    rgb(111, 212, 138) 0%,
-    rgb(127, 186, 96) 100%
-  );
+  background: linear-gradient(180deg, rgb(111, 212, 138) 0%, rgb(127, 186, 96) 100%);
 }
 
-.frame .ellipse-3 {
+.frame .ellipse-2 {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -80,7 +58,7 @@ body {
   filter: blur(4px);
 }
 
-.frame .ellipse-4 {
+.frame .ellipse-3 {
   position: absolute;
   width: 32px;
   height: 32px;
@@ -156,25 +134,74 @@ body {
   object-fit: cover;
 }
 
-.apply {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.frame .div-wrapper-2 {
   position: absolute;
   width: 234px;
   height: 73px;
   top: 489px;
   left: 867px;
   background-color: #8cdb63;
-  border-radius: 50px;
+  border-radius: 164.57px;
+}
+.frame .div-wrapper-2:hover{
+	background: #6cb845;
+}
+
+.frame .text-wrapper-2 {
+  position: absolute;
+  top: 18px;
+  left: 65px;
   font-family: "Noto Sans KR-Black", Helvetica;
   font-weight: 900;
   color: #ffffff;
   font-size: 28px;
   letter-spacing: 0;
   line-height: 33.6px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.box {
+width:100%;
+height: 320px;
+flex-shrink: 0;
+background: #DCF3D0;
+display:flex;
+align-items: center;
+justify-content: center;
+gap:46px;
 }
 
-.apply:hover {
-  background: #6cb845;
+.box .frame {
+display: flex;
+width: 222px;
+height:151px;
+flex-direction: column;
+align-items: center;
+gap: 18px;
+border-radius: 32px;
+background: #ffffff;
+padding:20px;
+}
+
+.box .text {
+color: #191825;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%;
+}
+
+
+.box .frame .text-wrapper-3 {
+color: #FF5722;
+font-family: Noto Sans KR;
+font-size: 35px;
+font-style: normal;
+font-weight: 400;
+line-height: normal; 
+}
+
+* {
+  box-sizing: border-box;
 }
