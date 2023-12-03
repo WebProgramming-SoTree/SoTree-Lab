@@ -3,56 +3,84 @@ body{
 	padding:0;
 	margin:0;
 }
-.frame-wrapper{
-	width: 100%;
-height: auto;
-margin:0;
-background:#E3E3E3;
+.wrapper{
+width:100%;
+height:auto;
 display:flex;
-align-items: center;
+align-items:center;
 justify-content: center;
-padding:25px;
+padding:100px;
 }
-.frame-wrapper .frame{
-	width: 100%;
-height: auto;
-flex-shrink: 0;
-margin:0;
-border-radius: 50px;
-background: #FFF;
-padding:100px 400px;
-display:flex;
-flex-direction: column;
-align-items: center;
-gap:50px;
-}
-
-.frame .apply{
-	color: #8B8B91;
-font-family: Noto Sans KR;
-font-size: 64px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-text-align: center;
-margin-bottom:50px;
-}
-
-.frame .form{
+.frame-wrapper{
 width: auto;
 height: auto;
 flex-shrink: 0;
-color: #8B8B91;
+display:flex;
+align-items:start;
+flex-direction: column;
+margin:0;
+}
+.frame-wrapper .apply{
+	color: #000;
 font-family: Noto Sans KR;
-font-size: 25px;
+font-size: 30px;
 font-style: normal;
 font-weight: 400;
-line-height: normal;	
-text-align: center;
+line-height: normal;
+text-align:start;
 }
 
-.frame .form .input{
-width: 250px;
-height: 30px;
+.frame-wrapper .frame{
+	width: 450px;
+height: auto;
 flex-shrink: 0;
+background: #FFF;
+box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
+display:flex;
+align-items: center;
+gap:10px;
+padding:60px;
+}
+.frame .input-wrapper{
+flex-shrink: 0;
+color: #000;
+font-family: Noto Sans KR;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 0;
+margin:0;
+}
+.frame .input-wrapper .input{
+	width: 300px;
+height: 35px;
+flex-shrink: 0;
+background: #D9D9D9;
+border:none;
+margin:0;
+}
+
+.frame-wrapper .button{
+display: flex;
+width: 177px;
+height: 55px;
+padding: 16px 32px;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+color: #FFF;
+font-family: Noto Sans KR;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%;
+background:#8CDB63;
+margin-top:30px;
+border-radius: 100px;
+text-align: center;
+border:0;
+}
+
+.frame-wrapper .button:hover{
+  background: #6cb845;
 }
