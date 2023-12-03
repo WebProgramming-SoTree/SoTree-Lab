@@ -9,7 +9,7 @@ body {
   display: inline-flex;
   width: 100%;
   height: auto;
-  padding: 20px 165px;
+  padding: 10px 165px;
   margin: 0;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +39,7 @@ body {
 
 .menu-bar ul li a {
   color: #8b8b91;
-  font-size: 20px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -87,7 +87,7 @@ body {
 
 .sub-menu ul li a {
   color: #8b8b91;
-  font-size: 20px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
