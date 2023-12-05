@@ -25,13 +25,11 @@
             conn = DriverManager.getConnection(jdbcurl, "sotree", "0119");
             stmt = conn.createStatement();
 
-            // 입력받은 정보를 변수에 저장
             String name = request.getParameter("name");
             String studentId = request.getParameter("studentId");
             String major = request.getParameter("major");
             String phone = request.getParameter("phone");
 
-            // SQL 쿼리 작성 및 실행
             String insertSql = "INSERT INTO table_users (name, studentId, major, phone) VALUES ('" + name + "', " + studentId + ", '" + major + "', '" + phone + "')";
             stmt.executeUpdate(insertSql);
         }
