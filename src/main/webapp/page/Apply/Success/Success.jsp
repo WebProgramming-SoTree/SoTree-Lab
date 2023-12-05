@@ -4,12 +4,12 @@
 <html>
 <head>
     <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="Fail.css" />
+    <link rel="stylesheet" href="Success.css" />
     <link rel="stylesheet" href="../../Nav/Nav.css" />
     <link rel="stylesheet" href="../../Footer/Footer.css" />
     <meta name="viewport" content="width=divice-width">
     <meta charset="UTF-8">
-    <title>Login-Fail</title>
+    <title>Apply-Success</title>
 </head>
 <body>
     <header>
@@ -17,10 +17,10 @@
     </header>
     <div class="wrapper">
         <div class="frame-wrapper">
-			<div class="login">로그인</div>
+			<div class="apply">회원가입</div>
 			<div class="frame">
 				<img class="image" src="../resource/check.svg">
-				<div class="fail-text">로그인 실패</div>
+				<div class="success-text">가입이<br>완료되었습니다.</div>
 			</div>
         </div>
     </div>
