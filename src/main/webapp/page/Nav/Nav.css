@@ -6,6 +6,9 @@ body {
 }
 
 .header {
+  z-index:3;
+  top:0;
+  position:fixed;
   display: inline-flex;
   width: 100%;
   height: auto;
@@ -13,6 +16,7 @@ body {
   margin: 0;
   justify-content: space-between;
   align-items: center;
+  background:#fff;
 }
 .menu-bar{
 	display:inline-flex;
@@ -39,7 +43,7 @@ body {
 
 .menu-bar ul li a {
   color: #8b8b91;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -87,7 +91,7 @@ body {
 
 .sub-menu ul li a {
   color: #8b8b91;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
