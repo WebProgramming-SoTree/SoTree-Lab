@@ -43,7 +43,7 @@
           </li>
         </ul>
       </div>
-      <div id="login">로그인</div>
+      <div class="login-button"><a class="login" href="../Login/Login.jsp">로그인</a></div>
       </header>
   </body>
 </html>

@@ -9,7 +9,7 @@ height:auto;
 display:flex;
 align-items:center;
 justify-content: center;
-padding:150px;
+padding:170px;
 }
 .frame-wrapper{
 width: auto;
@@ -28,7 +28,6 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 text-align:start;
-gap:15px;
 }
 
 .frame-wrapper .frame{
