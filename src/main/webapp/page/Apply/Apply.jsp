@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Apply.css" />
     <link rel="stylesheet" href="../Nav/Nav.css" />
     <link rel="stylesheet" href="../Footer/Footer.css" />
-    <meta name="viewport" content="width=divice-width">
+    <meta name="viewport" content="width=device-width">
     <meta charset="UTF-8">
     <title>Apply</title>
 </head>
@@ -25,18 +25,28 @@
             conn = DriverManager.getConnection(jdbcurl, "sotree", "0119");
             stmt = conn.createStatement();
 
-            // 입력받은 정보를 변수에 저장
-            String name = request.getParameter("name");
-            String studentId = request.getParameter("studentId");
-            String major = request.getParameter("major");
-            String phone = request.getParameter("phone");
+            if (request.getMethod().equalsIgnoreCase("POST")) {
+                String name = request.getParameter("name");
+                String studentId = request.getParameter("studentId");
+                String major = request.getParameter("major");
+                String phone = request.getParameter("phone");
 
-            // SQL 쿼리 작성 및 실행
-            String insertSql = "INSERT INTO table_users (name, studentId, major, phone) VALUES ('" + name + "', " + studentId + ", '" + major + "', '" + phone + "')";
-            stmt.executeUpdate(insertSql);
+                String insertSql = "INSERT INTO table_users (name, studentId, major, phone) VALUES ('" + name + "', " + studentId + ", '" + major + "', '" + phone + "')";
+                stmt.executeUpdate(insertSql);
+
+                // 데이터베이스 저장 완료 후 Success.jsp로 이동
+                response.sendRedirect("./Success/Success.jsp");
+            }
         }
         catch(Exception e){
             out.println("DB 연동 오류:"+e.getMessage());
+        } finally {
+            try {
+                if (stmt != null) stmt.close();
+                if (conn != null) conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     %>
     <div class="wrapper">
@@ -63,10 +73,6 @@
             </form>
         </div>
     </div>
-    <%
-        stmt.close();
-        conn.close();
-    %>
     <footer>
         <%@include file="../Footer/Footer.jsp" %>
     </footer>

@@ -110,22 +110,26 @@ body {
 
 }
 
-#login {
+.login-button {
   display: flex;
   width: auto;
   height: auto;
   padding: 16px 32px;
   border-radius: 100px;
   background: #8cdb63;
+}
+.login-button .login{
+	  text-decoration: none;
   color: #fff;
   font-size: 17px;
   font-style: normal;
   font-weight: 900;
-  line-height: 120%;
+  line-height: 120%;	  
 }
 
-#login:hover {
+.login-button:hover {
   background: #6cb845;
+
 }
 .logo{
 	width:50px;
