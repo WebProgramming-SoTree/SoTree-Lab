@@ -76,15 +76,35 @@ pageEncoding="UTF-8"%>
 		</div>
 		
 		<div class="frame-photo">
-			<div class="text-green">Photo</div>
+			<div class="photo-contents">
+				<img class="rectangle2" src="./resource/Rectangle2.svg">
+				<div class="title-photo">Photo</div>
+				<img class="photo" src="./resource/HomePhoto.png">			
+				
+			</div>
 		</div>
 		
 		<div class="frame-about">
-			<div class="text-white">About</div>
+			<div class="about-contents">
+				<img class="rectangle3" src="./resource/Rectangle3.svg">	
+				<div class="title-about">About</div>
+				<p class="text-about">소나무는 1970년에 시작된 컴퓨터공학과 사진 동아리입니다.</p>
+				<p class="text2-about">활동 내용<br><br>
+				-한강, 축제 등으로 출사<br>
+				-개강총회, 종강총회 진행<br>
+				-원하는 과목 스터디 진행<br>
+				-다양한 학술정보와 선배들과의 교류
+				</p>		
+			</div>
 		</div>
 		
+		
+		
 		<div class="frame-member">
-			<div class="text-green">Member</div>
+			<div class="member-contents">
+				<div class="title-member">Member</div>
+						
+			</div>
 		</div>
 	</div>
 	<footer>
