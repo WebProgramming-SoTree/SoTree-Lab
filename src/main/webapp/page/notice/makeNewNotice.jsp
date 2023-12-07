@@ -17,21 +17,20 @@
 					<td><input type="text" name="notice_date" size="30"></td>
 				</tr>
 				<tr>
-					<td>작 성 자 :</td>
-					<td><input type="text" name="writer" size="10"></td>
-				</tr>
-				<!-- <tr>
 					<td valign="top">글 내 용:</td>
-					<td><textarea name="content" cols="65" rows="4"></textarea></td>
-				</tr> -->
-				<tr>
-					<td>아이디:</td>
-					<td><input type="text" name="id" size="10" maxlength="8"></td>
+					<td><textarea name="content" cols="65" rows="4"></textarea> </td>
 				</tr>
-				<tr>
-					<td>패스워드:</td>
-					<td><input type="password" name="passwd" size="10" maxlength="8"></td>
-				</tr>
+<%--				<tr>--%>
+<%--					<td>작 성 자 :</td>--%>
+<%--					<td><input type="text" name="writer" size="10"></td>--%>
+<%--				</tr>--%>
+<%--					<td>아이디:</td>--%>
+<%--					<td><input type="text" name="id" size="10" maxlength="8"></td>--%>
+<%--				</tr>--%>
+<%--				<tr>--%>
+<%--					<td>패스워드:</td>--%>
+<%--					<td><input type="password" name="passwd" size="10" maxlength="8"></td>--%>
+<%--				</tr>--%>
 			</table><br><br>
 			
 			<input type="submit" value="등록하기">

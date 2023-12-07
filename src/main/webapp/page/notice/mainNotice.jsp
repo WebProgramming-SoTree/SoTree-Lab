@@ -58,7 +58,8 @@
 							String url = "jdbc:mysql://localhost:3306/sotree?serverTimezone=UTC";
 							conn = DriverManager.getConnection(url, "sotree", "0119");
 							stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-							sql = "select * from table_notice order by refer_num desc, notice_num asc ";
+							//sql = "select * from table_notice order by refer_num desc, notice_num asc ";
+							sql = "SELECT table_notice.*, table_users.name FROM table_notice INNER JOIN table_users ON table_notice.user_id = table_users.id";
 							rs = stmt.executeQuery(sql);
 						}
 						catch(Exception e){
@@ -78,14 +79,14 @@
 							<td><%= notice_num %></td>
 							<td><a href="detailNotice.jsp?notice_num=<%=notice_num%>"><%= rs.getString("title") %></a></td>
 							<td><%= rs.getString("notice_date") %></td>
-							<td><%= rs.getString("writer") %></td>
+							<td><%= rs.getString("name") %></td>
 							<td><%= refer_num %></td>
 						</tr>
 							
 					</tbody>
 					<%
-						String id = rs.getString("id");
-						String passwd = rs.getString("passwd");
+//						String id = rs.getString("id");
+//						String passwd = rs.getString("passwd");
 						}
 					%>
 				</table>
