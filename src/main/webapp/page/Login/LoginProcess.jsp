@@ -24,6 +24,7 @@
         if (resultSet.next()) {
             // 로그인 성공
             // 가져온 정보를 자바빈 객체에 저장
+            userInfo.setid(resultSet.getInt("id"));
             userInfo.setName(resultSet.getString("name"));
             userInfo.setStudentId(resultSet.getString("studentId"));
             userInfo.setMajor(resultSet.getString("major"));

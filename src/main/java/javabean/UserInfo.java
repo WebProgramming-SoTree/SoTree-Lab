@@ -1,14 +1,18 @@
 package javabean;
 
 public class UserInfo {
-	private String id;
+	private int id;
     private String name;
     private String studentId;
     private String major;
     private String phone;
 
-    public String getid() {
+    public int getid() {
     	return id;
+    }
+
+    public void setid(int id) {
+        this.id = id;
     }
     public String getName() {
     	return name;
