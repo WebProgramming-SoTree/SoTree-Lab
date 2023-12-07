@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <%@include file="../../Nav/Nav.jsp" %>
+        <%@include file="/page/Nav/Nav.jsp" %>
     </header>
     <div class="wrapper">
         <div class="frame-wrapper">
@@ -25,7 +25,7 @@
         </div>
     </div>
     <footer>
-        <%@include file="../../Footer/Footer.jsp" %>
+        <%@include file="/page/Footer/Footer.jsp" %>
     </footer>
 </body>
 </html>
