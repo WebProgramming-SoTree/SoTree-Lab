@@ -109,25 +109,46 @@ body {
     visibility: visible;		
 
 }
-
-.login-button {
+.login-wrapper{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	gap:15px;
+}
+.login-wrapper .user-name{
+	color: #000;
+	font-family: Actor;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 120%; 
+}
+.login-wrapper .button{
   display: flex;
   width: auto;
   height: auto;
-  padding: 16px 32px;
+  padding: 13px 25px;
   border-radius: 100px;
   background: #8cdb63;
 }
-.login-button .login{
-	  text-decoration: none;
+.login-wrapper .button .login{
+  text-decoration: none;
   color: #fff;
-  font-size: 17px;
+  font-size: 15px;
   font-style: normal;
-  font-weight: 900;
+  font-weight: 600;
+  line-height: 120%;	  
+}
+.login-wrapper .button .logout{
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
   line-height: 120%;	  
 }
 
-.login-button:hover {
+.login-wrapper .button:hover {
   background: #6cb845;
 
 }

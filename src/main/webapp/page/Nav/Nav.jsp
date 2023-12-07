@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="javabean.UserInfo" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,10 +12,11 @@
       <div id="logo">
         <img class="logo" alt="로고" src="../Nav/logo.png" width="50px" height="50px"/>
       </div>
+      
       <div class="menu-bar">
         <ul>
           <li>
-            <a href="#">소나무</a>
+            <a href="<%= request.getContextPath() %>/page/Home/Home.jsp">소나무</a>
             <div class="sub-menu" style="background:#fff; top:35px"> 
              <ul>
               <li><a href="#">About</a></li>
@@ -36,14 +38,33 @@
             <a href="#">공지사항</a>
             <div class="sub-menu" style="background:#fff; top:35px">
             <ul>
-              <li><a href="#">공지</a></li>
+              <li><a href="<%= request.getContextPath() %>/page/notice/mainNotice.jsp">공지</a></li>
               <li><a href="#">일정</a></li>
             </ul>
             </div>
           </li>
         </ul>
       </div>
-      <div class="login-button"><a class="login" href="../Login/Login.jsp">로그인</a></div>
+      
+      <div class="login-wrapper">
+	    <%
+	        UserInfo userInfo = (UserInfo)session.getAttribute("userInfo");
+	        if (userInfo != null) {
+	    %>
+	        <div class="user-name"><%= userInfo.getName() %> 님</div>
+	        <div class="button">
+	            <a class="logout" href="<%= request.getContextPath() %>/page/Home/Logout.jsp">로그아웃</a>
+	        </div>
+	    <%
+	        } else {
+	    %>
+	        <div class="button">
+	            <a class="login" href="<%= request.getContextPath() %>/page/Login/Login.jsp">로그인</a>
+	        </div>
+	    <%
+	        }
+	    %>
+      </div>
       </header>
   </body>
 </html>
