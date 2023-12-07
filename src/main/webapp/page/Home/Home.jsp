@@ -34,7 +34,7 @@ pageEncoding="UTF-8"%>
 				새로운 휴식처를 제공합니다. 쑥쑥 자라나는 소나무처럼 함께
 				웃고, 공부하고, 출사하러 가요~!
 				</p>
-				<div><a class="apply-button" href="../Apply/Apply.jsp">지원하기</a></div>
+				<div><a class="apply-button" href="<%= request.getContextPath() %>/page/Apply/Apply.jsp">지원하기</a></div>
 			</div>
 		</div>
 		

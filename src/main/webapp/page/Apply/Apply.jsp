@@ -18,6 +18,11 @@
     <%
         Connection conn = null;
         Statement stmt = null;
+        
+        String name;
+        String studentId;
+        String major;
+        String phone;
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -26,12 +31,12 @@
             stmt = conn.createStatement();
 
             if (request.getMethod().equalsIgnoreCase("POST")) {
-                String name = request.getParameter("name");
-                String studentId = request.getParameter("studentId");
-                String major = request.getParameter("major");
-                String phone = request.getParameter("phone");
+				name=request.getParameter("name");
+				studentId=request.getParameter("studentId");
+				major=request.getParameter("major");
+				phone=request.getParameter("phone");
 
-                String insertSql = "INSERT INTO table_users (name, studentId, major, phone) VALUES ('" + name + "', " + studentId + ", '" + major + "', '" + phone + "')";
+                String insertSql = "INSERT INTO table_users (name, studentId, major, phone) VALUES ('" + name + "', '" + studentId + "', '" + major + "', '" + phone + "')";
                 stmt.executeUpdate(insertSql);
 
                 // 데이터베이스 저장 완료 후 Success.jsp로 이동
@@ -78,3 +83,4 @@
     </footer>
 </body>
 </html>
+
