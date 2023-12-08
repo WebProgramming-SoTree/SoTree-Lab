@@ -10,7 +10,9 @@
   <body>
     <header class="header">
       <div id="logo">
-        <img class="logo" alt="로고" src="../Nav/logo.png" width="50px" height="50px"/>
+        <a href="<%= request.getContextPath() %>/page/Home/Home.jsp">
+        <img class="logo" alt="로고" src="<%= request.getContextPath() %>/page/Nav/logo.png" width="50px" height="50px"/>
+        </a>
       </div>
       
       <div class="menu-bar">
@@ -19,9 +21,9 @@
             <a href="<%= request.getContextPath() %>/page/Home/Home.jsp">소나무</a>
             <div class="sub-menu" style="background:#fff; top:35px"> 
              <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Photo</a></li>
-              <li><a href="#">Members</a></li>
+              <li><a href="<%= request.getContextPath() %>/page/Home/Home.jsp#photo">Photo</a></li>
+              <li><a href="<%= request.getContextPath() %>/page/Home/Home.jsp#about">About</a></li>
+              <li><a href="<%= request.getContextPath() %>/page/Home/Home.jsp#member">Members</a></li>
             </ul>           
             </div>
           </li>

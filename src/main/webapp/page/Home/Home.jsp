@@ -26,15 +26,15 @@ pageEncoding="UTF-8"%>
 				<div class="eclipse2"></div>
 				<div class="eclipse3"></div>
 				<div class="eclipse4"></div>
-				<div class="eclipse5"></div>				
-			</div>
-			<div class="text-wrapper">
-				<div class="text1">Hello World?</div>
-				<p class="text2">알고리즘, 자료구조...복잡한 컴퓨터 전공으로 지친 당신에게
-				새로운 휴식처를 제공합니다. 쑥쑥 자라나는 소나무처럼 함께
-				웃고, 공부하고, 출사하러 가요~!
-				</p>
-				<div><a class="apply-button" href="<%= request.getContextPath() %>/page/Apply/Apply.jsp">지원하기</a></div>
+				<div class="eclipse5"></div>
+				<div class="text-wrapper">
+					<div class="text1">Hello World?</div>
+					<p class="text2">알고리즘, 자료구조...복잡한 컴퓨터 전공으로 지친 당신에게
+					새로운 휴식처를 제공합니다. 쑥쑥 자라나는 소나무처럼 함께
+					웃고, 공부하고, 출사하러 가요~!
+					</p>
+					<div><a class="apply-button" href="<%= request.getContextPath() %>/page/Apply/Apply.jsp">지원하기</a></div>
+				</div>							
 			</div>
 		</div>
 		
@@ -74,36 +74,77 @@ pageEncoding="UTF-8"%>
 				</div>													
 			</div>
 		</div>
-		
-		<div class="frame-photo">
-			<div class="photo-contents">
-				<img class="rectangle2" src="./resource/Rectangle2.svg">
-				<div class="title-photo">Photo</div>
-				<img class="photo" src="./resource/HomePhoto.png">			
-				
+		<div class="frame-wrapper2">
+			<div class="frame-photo" id="photo">
+			  <div class="photo-contents">
+			    <div class="title-photo">Photo</div>
+			    <img class="photo active" id="photo1" src="./resource/home1.jpg">
+			    <img class="photo" id="photo2" src="./resource/home2.jpg">
+			    <img class="photo" id="photo3" src="./resource/home3.jpg">
+			    <img class="photo" id="photo3" src="./resource/home4.jpg">
+			    <img class="arrow left" onclick="prevPhoto()" src="./resource/left.svg">
+			    <img class="arrow right" onclick="nextPhoto()" src="./resource/right.svg">
+			  </div>
+			
+			  <script>
+			    var currentPhoto = 1;
+			
+			    function prevPhoto() {
+			      if (currentPhoto > 1) {
+			        currentPhoto--;
+			      } else {
+			        currentPhoto = 4;
+			      }
+			      updatePhoto();
+			    }
+			
+			    function nextPhoto() {
+			      if (currentPhoto < 4) {
+			        currentPhoto++;
+			      } else {
+			        currentPhoto = 1;
+			      }
+			      updatePhoto();
+			    }
+			
+			    function updatePhoto() {
+			      var photos = document.querySelectorAll('.photo');
+			      photos.forEach((photo, index) => {
+			        if (index + 1 === currentPhoto) {
+			          photo.classList.add('active');
+			        } else {
+			          photo.classList.remove('active');
+			        }
+			      });
+			    }
+			  </script>
+			</div>
+			
+			<div class="frame-about" id="about">	
+				<div class="about-contents">
+					<div class="title-about">About</div>
+					<p class="text-about">소나무는 1970년에 시작된 컴퓨터공학과 사진 동아리입니다.</p>
+					<p class="text2-about">활동 내용<br><br>
+					-한강, 축제 등으로 출사<br>
+					-개강총회, 종강총회 진행<br>
+					-원하는 과목 스터디 진행<br>
+					-다양한 학술정보와 선배들과의 교류
+					</p>
+					<img class="image-about" src="./resource/soRoom.png">		
+				</div>
 			</div>
 		</div>
 		
-		<div class="frame-about">
-			<div class="about-contents">
-				<img class="rectangle3" src="./resource/Rectangle3.svg">	
-				<div class="title-about">About</div>
-				<p class="text-about">소나무는 1970년에 시작된 컴퓨터공학과 사진 동아리입니다.</p>
-				<p class="text2-about">활동 내용<br><br>
-				-한강, 축제 등으로 출사<br>
-				-개강총회, 종강총회 진행<br>
-				-원하는 과목 스터디 진행<br>
-				-다양한 학술정보와 선배들과의 교류
-				</p>		
-			</div>
-		</div>
 		
-		
-		
-		<div class="frame-member">
+		<div class="frame-member" id="member">
 			<div class="member-contents">
 				<div class="title-member">Member</div>
-						
+				<img class="image-member" src="./resource/member.jpg">
+				<div class="text-member"><h2>2023년 2학기 운영진</h2><br>
+				회장: 김민정(컴퓨터공학과)<br><br>
+				부회장: 박지현(컴퓨터공학과)<br><br>
+				총무: 윤민웅(컴퓨터공학과)<br><br>
+				</div>
 			</div>
 		</div>
 	</div>
