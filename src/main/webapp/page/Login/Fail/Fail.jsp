@@ -21,6 +21,7 @@
 			<div class="frame">
 				<img class="image" src="../resource/fail.svg">
 				<div class="fail-text">로그인 실패</div>
+				<div ><a class="fail-text2" href="<%= request.getContextPath() %>/page/Login/Login.jsp">돌아가기</a></div>
 			</div>
         </div>
     </div>
