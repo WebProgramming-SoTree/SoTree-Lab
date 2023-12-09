@@ -10,7 +10,8 @@
 <center>
     <%
         int notice_num, refer_num = 0;
-        String title = "", notice_date = "", writer = "";
+        String title = "", writer = "";
+        Date notice_dat;
         Connection conn = null;
         Statement stmt = null;
         ResultSet rs = null;
@@ -22,7 +23,8 @@
             String url = "jdbc:mysql://localhost:3306/sotree?serverTimezone=UTC";
             conn = DriverManager.getConnection(url, "sotree", "0119");
             stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-            String sql = "select * from table_notice where notice_num = " + notice_num + "";
+            //String sql = "select * from table_notice where notice_num = " + notice_num + "";
+            String sql = "SELECT table_notice.*, table_users.name FROM table_notice INNER JOIN table_users ON table_notice.user_id = table_users.id WHERE notice_num = " + notice_num + "";
             rs = stmt.executeQuery(sql);
         }
         catch(Exception e){
@@ -32,10 +34,10 @@
         while(rs.next()){
             notice_num = Integer.parseInt(rs.getString("notice_num"));
             title = rs.getString("title");
-            notice_date = rs.getString("notice_date");
-            writer = rs.getString("writer");
+            //notice_date = rs.getDate("notice_date");
+            writer = rs.getString("name");
             refer_num = Integer.parseInt(rs.getString("refer_num"));
-        }
+        
     %>
     <table border="0" width="500">
         <tr>
@@ -48,14 +50,16 @@
         </tr>
         <tr>
             <td>작성 일자:</td>
-            <td><%= notice_date %></td>
+            <td><%= rs.getDate("notice_date") %></td>
         </tr>
 <%--        <tr>--%>
 <%--            <td><img src="image/ball.gif">글 내 용:</td>--%>
 <%--            <td><%= content %></td>--%>
 <%--        </tr>--%>
     </table><br><br>
-
+					<%
+						}
+					%>
 
 <%--    <a href="board-insert.jsp?ref=<%= refer_num %>&flag=r">답글 쓰기</a>--%>
 
