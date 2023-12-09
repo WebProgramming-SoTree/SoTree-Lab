@@ -10,7 +10,7 @@
 <center>
     <%
         int notice_num, refer_num = 0;
-        String title = "", writer = "";
+        String title = "", writer = "", content = "";
         Date notice_dat;
         Connection conn = null;
         Statement stmt = null;
@@ -23,7 +23,6 @@
             String url = "jdbc:mysql://localhost:3306/sotree?serverTimezone=UTC";
             conn = DriverManager.getConnection(url, "sotree", "0119");
             stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-            //String sql = "select * from table_notice where notice_num = " + notice_num + "";
             String sql = "SELECT table_notice.*, table_users.name FROM table_notice INNER JOIN table_users ON table_notice.user_id = table_users.id WHERE notice_num = " + notice_num + "";
             rs = stmt.executeQuery(sql);
         }
@@ -34,7 +33,6 @@
         while(rs.next()){
             notice_num = Integer.parseInt(rs.getString("notice_num"));
             title = rs.getString("title");
-            //notice_date = rs.getDate("notice_date");
             writer = rs.getString("name");
             refer_num = Integer.parseInt(rs.getString("refer_num"));
         
@@ -55,7 +53,7 @@
 <%--        <tr>--%>
 <%--            <td><img src="image/ball.gif">글 내 용:</td>--%>
 <%--            <td><%= content %></td>--%>
-<%--        </tr>--%>
+<!-- </tr> -->
     </table><br><br>
 					<%
 						}
@@ -63,7 +61,7 @@
 
 <%--    <a href="board-insert.jsp?ref=<%= refer_num %>&flag=r">답글 쓰기</a>--%>
 
-<%--    <a href="board-modify-pwd.jsp?id=<%= notice_num %>">게시글 수정</a>--%>
+	<a href="../modify/modifyNotice.jsp?notice_num=<%= notice_num %>">게시글 수정</a>
 
 	<a href="../modify/deleteNotice.jsp?notice_num=<%= notice_num %>">게시글 삭제</a>
 

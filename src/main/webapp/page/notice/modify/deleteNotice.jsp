@@ -34,7 +34,7 @@
 		{
 	%>
 	<center><h2>게시글 생성자가 아닙니다.</h2>
-		<a href="../mainNotice.jsp?notice_num=<%= request.getParameter("notice_num") %>">뒤로</a>
+		<a href="../mainNotice.jsp">뒤로</a>
 	</center>
 	<%
 		}
