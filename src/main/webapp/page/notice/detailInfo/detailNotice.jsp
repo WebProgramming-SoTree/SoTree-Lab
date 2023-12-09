@@ -67,7 +67,7 @@
 
 <%--    <a href="board-delete-pwd.jsp?id=<%= notice_num %>">게시글 삭제</a>--%>
 
-    <a href="mainNotice.jsp">게시글 목록 보기</a>
+    <a href="../mainNotice.jsp">게시글 목록 보기</a>
 </center>
 </body>
 </html>
