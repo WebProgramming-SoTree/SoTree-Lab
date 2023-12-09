@@ -9,17 +9,19 @@
 	<%
 	int temp = 0, cnt;
 	int new_notice_num = 0, refer_num = 0;
-	String title, notice_date, content, reply;
+	String title, content, reply;
+	Date notice_date;
 	String name;
 	Connection conn = null;
 	Statement stmt = null;
 	ResultSet rs = null;
 	String sql_update;
 
-//	Object user_id_session = session.getAttribute("userInfo");
-//	String user_id = (String) user_id_session;
 		javabean.UserInfo user_info = (javabean.UserInfo) session.getAttribute("userInfo");
 		int user_id = user_info.getid();
+	
+				
+		javabean.BoardList board_list = (javabean.BoardList) session.getAttribute("boardList");
 	
 	try{
 		Class.forName("com.mysql.jdbc.Driver");
@@ -28,6 +30,7 @@
 		stmt = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
 		String sql = "select count(*) as cnt, max(notice_num) as max_notice_num from table_notice";
 		rs = stmt.executeQuery(sql);
+
 	}
 	catch(Exception e){
 		out.println("DB 연동 오류입니다.:" + e.getMessage());
@@ -40,7 +43,7 @@
 	}
 	new_notice_num++;
 	title = request.getParameter("title");
-	notice_date = request.getParameter("notice_date");
+	notice_date = board_list.getRegDate();
 	content = request.getParameter("content");
 	reply = request.getParameter("reply");
 	name = user_info.getName();

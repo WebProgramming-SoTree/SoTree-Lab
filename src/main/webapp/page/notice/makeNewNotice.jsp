@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
+<%@page import="javabean.BoardList"%>
 <html>
 	<head><title>공지사항 작성</title></head>
 	<body>
@@ -12,25 +14,22 @@
 					<td>제 목:</td>
 					<td><input type="text" name="title" size="50"></td>
 				</tr>
-				<tr>
-					<td>작성 날짜:</td>
-					<td><input type="text" name="notice_date" size="30"></td>
-				</tr>
+				<%
+				try {
+							BoardList boardList = new BoardList();
+							Date reg_date = new Date(System.currentTimeMillis());
+							
+							boardList.setRegDate(reg_date);
+							session.setAttribute("boardList", boardList);
+							
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+				%>
 				<tr>
 					<td valign="top">글 내 용:</td>
 					<td><textarea name="content" cols="65" rows="4"></textarea> </td>
 				</tr>
-<%--				<tr>--%>
-<%--					<td>작 성 자 :</td>--%>
-<%--					<td><input type="text" name="writer" size="10"></td>--%>
-<%--				</tr>--%>
-<%--					<td>아이디:</td>--%>
-<%--					<td><input type="text" name="id" size="10" maxlength="8"></td>--%>
-<%--				</tr>--%>
-<%--				<tr>--%>
-<%--					<td>패스워드:</td>--%>
-<%--					<td><input type="password" name="passwd" size="10" maxlength="8"></td>--%>
-<%--				</tr>--%>
 			</table><br><br>
 			
 			<input type="submit" value="등록하기">
