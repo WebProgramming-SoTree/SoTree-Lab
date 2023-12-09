@@ -35,7 +35,7 @@
             title = rs.getString("title");
             writer = rs.getString("name");
             refer_num = Integer.parseInt(rs.getString("refer_num"));
-        
+            content = rs.getString("content");
     %>
     <table border="0" width="500">
         <tr>
@@ -47,19 +47,17 @@
             <td><%= title %></td>
         </tr>
         <tr>
+        	<td>글 내 용:</td>
+        	<td><%= content %></td>
+        </tr>
+        <tr>
             <td>작성 일자:</td>
             <td><%= rs.getDate("notice_date") %></td>
         </tr>
-<%--        <tr>--%>
-<%--            <td><img src="image/ball.gif">글 내 용:</td>--%>
-<%--            <td><%= content %></td>--%>
-<!-- </tr> -->
     </table><br><br>
 					<%
 						}
 					%>
-
-<%--    <a href="board-insert.jsp?ref=<%= refer_num %>&flag=r">답글 쓰기</a>--%>
 
 	<a href="../modify/modifyNotice.jsp?notice_num=<%= notice_num %>">게시글 수정</a>
 

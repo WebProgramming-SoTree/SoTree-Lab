@@ -84,8 +84,6 @@
 							
 					</tbody>
 					<%
-//						String id = rs.getString("id");
-//						String passwd = rs.getString("passwd");
 						}
 					%>
 				</table>
