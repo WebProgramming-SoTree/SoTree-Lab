@@ -76,7 +76,7 @@
 					<tbody>
 						<tr>
 							<td><%= notice_num %></td>
-							<td><a href="detailNotice.jsp?notice_num=<%=notice_num%>"><%= rs.getString("title") %></a></td>
+							<td><a href="./detailInfo/detailNotice.jsp?notice_num=<%=notice_num%>"><%= rs.getString("title") %></a></td>
 							<td><%= rs.getDate("notice_date") %></td>
 							<td><%= rs.getString("name") %></td>
 							<td><%= refer_num %></td>
@@ -84,8 +84,6 @@
 							
 					</tbody>
 					<%
-//						String id = rs.getString("id");
-//						String passwd = rs.getString("passwd");
 						}
 					%>
 				</table>
