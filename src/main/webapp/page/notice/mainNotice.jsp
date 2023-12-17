@@ -51,8 +51,6 @@ request.setCharacterEncoding("utf-8");
 	rs.last();
 	rownum = rs.getRow();
 	rs.beforeFirst();
-	
-	//ResultSetMetaData rsmd = rs.getMetaData();
 	%>
 
 	<div class="headerNotice">
@@ -92,7 +90,10 @@ request.setCharacterEncoding("utf-8");
 					</thead>
 
 					<%
+					int displayedNoticeNum = rownum;
+					
 					while (rs.next()) {
+						
 						notice_num = Integer.parseInt(rs.getString("notice_num"));
 						refer_num = Integer.parseInt(rs.getString("refer_num"));
 					%>
@@ -100,7 +101,7 @@ request.setCharacterEncoding("utf-8");
 
 					<tbody>
 						<tr>
-							<td><%=notice_num%></td>
+							<td><%=displayedNoticeNum-- %> </td>
 							<td><a
 								href="./detailInfo/detailNotice.jsp?notice_num=<%=notice_num%>"><%=rs.getString("title")%></a></td>
 							<td><%=rs.getDate("notice_date")%></td>
