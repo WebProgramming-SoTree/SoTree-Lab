@@ -12,4 +12,6 @@ public class BoardList {
 	public Date getRegDate() {
 		return regDate;
 	}
+	
+	
 }
