@@ -41,7 +41,7 @@
             <div class="sub-menu" style="background:#fff; top:35px">
             <ul>
               <li><a href="<%= request.getContextPath() %>/page/notice/mainNotice.jsp">공지</a></li>
-              <li><a href="#">일정</a></li>
+              <li><a href="#">Q&A</a></li>
             </ul>
             </div>
           </li>
