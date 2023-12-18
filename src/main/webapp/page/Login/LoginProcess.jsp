@@ -36,7 +36,7 @@
             response.sendRedirect("../Home/Home.jsp");
         } else {
             // 로그인 실패
-            response.sendRedirect("./Fail/Fail.jsp");
+            response.sendRedirect("./Fail.jsp");
         }
     } catch (ClassNotFoundException | SQLException e) {
         e.printStackTrace();
