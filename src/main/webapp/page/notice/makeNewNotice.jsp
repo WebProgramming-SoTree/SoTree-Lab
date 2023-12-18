@@ -42,8 +42,9 @@
 			<%	} else  %>
 						<input type="hidden" name="reply" value="n">
 			</form>
-			
-			<a href="mainNotice.jsp">게시글 목록 보기</a><br>
+				
+				<a href="mainNotice.jsp">게시글 목록 보기</a>
+<!-- 			<a href="" onclick="closePopup();"> 게시글 목록 보기 </a> -->
 		</center>
 	</body>
 </html>

@@ -8,8 +8,20 @@ request.setCharacterEncoding("utf-8");
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="./detailNotice.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>공지사항-세부</title>
 </head>
+<script type="text/javascript"> 
+ 	function closePopup() {
+
+ 		//window.location.replace("../mainNotice.jsp");
+ 		window.close();
+ 		response.sendRedirect("../mainNotice.jsp");
+ 		
+ 	}
+</script>
 <body>
 	<center>
 		<h2>게시글 내용</h2>
@@ -64,9 +76,11 @@ request.setCharacterEncoding("utf-8");
 			boardList.setNoticeNum(notice_num);
 			session.setAttribute("boardList", boardList);
 		%>
-		<table border="0" width="500">
+		<div class="headerNotice">
+			<table border="0" width="500" class="board-table">
 			<tr>
-				<td width="100">글 쓴 이:</td>
+				<td width="100"> 글 쓴 이:
+				</td>
 				<td><%=writer%></td>
 			</tr>
 			<tr>
@@ -81,7 +95,8 @@ request.setCharacterEncoding("utf-8");
 				<td>작성 일자:</td>
 				<td><%=rs.getDate("notice_date")%></td>
 			</tr>
-		</table>
+		</table>		
+		</div>
 		<br>
 		<br>
 		<%
@@ -115,12 +130,13 @@ request.setCharacterEncoding("utf-8");
 		%>
 
 
-
-
-		<a href="../modify/modifyNotice.jsp?notice_num=<%=notice_num%>">게시글수정</a> 
+			<div class="modify">
+			<a href="../modify/modifyNotice.jsp?notice_num=<%=notice_num%>">게시글수정</a> 
 		<a href="../modify/deleteNotice.jsp?notice_num=<%=notice_num%>">게시글 삭제</a> 
-		<a href="../mainNotice.jsp">게시글 목록 보기</a> 
-		<a href="?addPin=true">게시글 공지로 등록</a>
+		<a href="" onclick="closePopup();">게시글 목록 보기</a> 
+		<a href="?addPin=true" onclick="closePopup();">게시글 공지로 등록</a>
+			</div>
+
 
 	</center>
 </body>

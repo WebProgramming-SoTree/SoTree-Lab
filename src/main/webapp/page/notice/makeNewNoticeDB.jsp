@@ -63,9 +63,10 @@
 		out.println("DB 연동 오류입니다.:" + e.getMessage());
 	}
 	%>
-	<center>
-		<h2>작성한 글이 등록되었습니다.</h2>
-		<a href="mainNotice.jsp">게시글 목록 보기</a>
-	</center>
+	
+	<script>
+        alert('작성한 글이 등록되었습니다.');
+        window.close();
+    </script>
 	</body>
 </html>

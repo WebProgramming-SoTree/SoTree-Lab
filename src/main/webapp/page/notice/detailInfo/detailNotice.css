@@ -56,3 +56,28 @@
         line-height: normal;
         padding: 40px;
     }
+    .headerNotice {
+    width: 80%;
+    height: 250px;
+    opacity: 1;
+    flex-shrink: 0;
+	z-index: 1;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	gap:200px;
+	border-radius: 20px;
+	background:#DCF3D0;
+  } 
+  
+  .modify a {
+	  color: #8EBA8A;
+	  width: 200px;
+	  padding-right: 50px;
+	  padding-left: 50px;
+	  border-right: 2px solid #8EBA8A;
+  }
+  .modify a:hover{
+	  color: rgb(81, 99, 77);
+	  text-decoration: underline;
+  }

@@ -5,6 +5,11 @@
 <!DOCTYPE html>
 <html>
 <head><title>공지사항-삭제</title></head>
+<script type="text/javascript"> 
+ 	function closePopup() {
+ 		var pop = window.close();
+ 	}
+</script>
 <body>
 	<%
 	int notice_num;
@@ -19,7 +24,8 @@
 		%>
 		<script>
         alert('로그인하지 않았습니다');
-        window.location.href = '../mainNotice.jsp';
+        window.close();
+        //window.location.href = '../mainNotice.jsp';
     </script>
 		<%
 	}
@@ -45,7 +51,8 @@
 	%>
 	<script>
         alert('게시물 생성자가 아닙니다');
-        window.location.href = '../mainNotice.jsp';
+        window.close();
+        //window.location.href = '../mainNotice.jsp';
     </script>
 	<%
 		}
@@ -59,7 +66,7 @@
 			}
 	%>
 	<center><h2>게시글이 삭제되었습니다.</h2>
-		<a href="../mainNotice.jsp">게시글 목록 보기</a>
+		<a href="../mainNotice.jsp" onclick="closePopup();">게시글 목록 보기</a>
 	</center>
 	<%
 			break;
