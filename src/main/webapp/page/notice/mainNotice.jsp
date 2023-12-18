@@ -16,13 +16,13 @@ request.setCharacterEncoding("utf-8");
 </head>
 
 <script type="text/javascript">
-	function goPopup() {
-		var pop = window
-				.open(
-						"makeNewNotice.jsp",
-						"pop",
-						"width=1000,height=500, scrollbars=yes, resizable=yes, top=200, left=300, location=no, toolbar=no, status=no, menubar=no");
-	}
+  	function goDetailPopup(noticeNum) { 
+  		var pop = window 
+  				.open(
+  						"./detailInfo/detailNotice.jsp?notice_num=" + noticeNum, 
+  						"pop", 
+  						"width=1000,height=500, scrollbars=yes, resizable=yes, top=200, left=300, location=no, toolbar=no, status=no, menubar=no"); 
+  	}
 </script>
 
 <body>
@@ -113,8 +113,10 @@ request.setCharacterEncoding("utf-8");
 
 				<div class="container">
 					<form action="">
+<!-- 						<button id="btn_register" type="submit" class="btn_register" -->
+<!-- 							onclick="goPopup();">등록하기</button> -->
 						<button id="btn_register" type="submit" class="btn_register"
-							onclick="goPopup();">등록하기</button>
+							onclick="location=window.open('makeNewNotice.jsp')">등록하기</button>
 					</form>
 				</div>
 
@@ -142,8 +144,8 @@ request.setCharacterEncoding("utf-8");
 						<tbody>
 							<tr>
 								<td><%=displayedNoticeNum--%></td>
-								<td><a
-									href="./detailInfo/detailNotice.jsp?notice_num=<%=notice_num%>"><%=rs.getString("title")%></a></td>
+<%-- 								<td><a href="./detailInfo/detailNotice.jsp?notice_num=<%=notice_num%>"><%=rs.getString("title")%></a></td> --%>
+<td><a href="" onclick="goDetailPopup(<%= notice_num%>)"> <%=rs.getString("title")%></a></td>
 								<td><%=rs.getDate("notice_date")%></td>
 								<td><%=rs.getString("name")%></td>
 								<%-- 							<td><%=refer_num%></td> --%>

@@ -5,11 +5,6 @@
 <%@page import="javabean.BoardList"%>
 <html>
 	<head><title>공지사항 작성</title></head>
-	<script type="text/javascript">
-	function closePopup() {
-		var pop = window.close();
-	}
-</script>
 	<body>
 		<center>
 			<h2>게시판</h2>
@@ -47,8 +42,9 @@
 			<%	} else  %>
 						<input type="hidden" name="reply" value="n">
 			</form>
-
-			<a href="" onclick="closePopup();"> 게시글 목록 보기 </a>
+				
+				<a href="mainNotice.jsp">게시글 목록 보기</a>
+<!-- 			<a href="" onclick="closePopup();"> 게시글 목록 보기 </a> -->
 		</center>
 	</body>
 </html>

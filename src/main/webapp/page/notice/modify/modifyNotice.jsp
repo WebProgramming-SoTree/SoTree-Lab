@@ -3,6 +3,11 @@
 <%@ page import="java.sql.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
 <html>
+<script type="text/javascript"> 
+ 	function closePopup() {
+ 		var pop = window.close();
+ 	}
+</script>
 	<body>
 		<%
 		int notice_num;
@@ -17,7 +22,8 @@
 		%>
 		<script>
         alert('로그인하지 않았습니다');
-        window.location.href = '../mainNotice.jsp';
+        window.close();
+        //window.location.href = '../mainNotice.jsp';
     </script>
 		<%
 	}
@@ -45,7 +51,8 @@
 		
 		<script>
         alert('게시물 생성자가 아닙니다');
-        window.location.href = '../mainNotice.jsp';
+        window.close();
+        //window.location.href = '../mainNotice.jsp';
     </script>
 		<%
 			}
@@ -69,7 +76,7 @@
 			<input type="reset" value="다시쓰기">
 		</form>
 		
-		<a href="../mainNotice.jsp">취소</a>
+		<a href="../mainNotice.jsp" onclick="closePopup();">취소</a>
 		</center>
 		<%
 			}
