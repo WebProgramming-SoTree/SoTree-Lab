@@ -90,7 +90,7 @@ request.setCharacterEncoding("utf-8");
 					</thead>
 
 					<%
-					int displayedNoticeNum = rownum;
+					int displayedNoticeNum = rownum; // 총 행 수로 시작
 					
 					while (rs.next()) {
 						
