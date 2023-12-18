@@ -63,7 +63,6 @@ request.setCharacterEncoding("utf-8");
 
 			boardList.setNoticeNum(notice_num);
 			session.setAttribute("boardList", boardList);
-			out.println("notice_num: " + boardList.getNoticeNum());
 		%>
 		<table border="0" width="500">
 			<tr>
