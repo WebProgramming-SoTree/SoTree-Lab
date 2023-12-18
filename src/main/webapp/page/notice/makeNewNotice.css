@@ -1,0 +1,32 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  }
+  body {
+    font-size: 14px;
+    padding:0;
+	margin:0;
+  }
+  
+  .headerNotice {
+    width: 60%;
+    height: 200px;
+    opacity: 1;
+    flex-shrink: 0;
+	z-index: 1;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	gap:200px;
+	border-radius: 20px;
+	background:#DCF3D0;
+  } 
+  .modify a {
+	  color: #8EBA8A;
+	  width: 200px;
+  }
+  .modify a:hover{
+	  color: rgb(81, 99, 77);
+	  text-decoration: underline;
+  }
