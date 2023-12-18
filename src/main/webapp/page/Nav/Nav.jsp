@@ -31,7 +31,7 @@
             <a href="#">활동사진</a>
             <div class="sub-menu" style="background:#fff; top:35px">
             <ul>
-              <li><a href="#">2023</a></li>
+              <li><a href="<%= request.getContextPath() %>/page/photo/photo.html">2023</a></li>
               <li><a href="#">Before</a></li>
             </ul>
             </div>
