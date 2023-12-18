@@ -11,26 +11,20 @@ request.setCharacterEncoding("utf-8");
 <link href="./mainNotice.css" rel="stylesheet" />
 <link rel="stylesheet" href="../Nav/Nav.css" />
 <link rel="stylesheet" href="../Footer/Footer.css" />
+<meta name="viewport" content="width=divice-width">
 <title>공지사항</title>
 </head>
 <body>
-	<!-- 	<header> -->
-	<%-- 		<%@include file="../Nav/Nav.jsp"%> --%>
-	<!-- 	</header> -->
+		<header>
+			<%@include file="../Nav/Nav.jsp"%>
+		</header>
 
-	<!-- 	<div class="wrapper"> -->
-	<!-- 		<div class="frame-wrapper"> -->
-	<!-- 			<div class="frame"> -->
-
-	<!-- 			</div> -->
-	<!-- 		</div> -->
-	<!-- 	</div> -->
-
-	<!-- 	<footer> -->
-	<%-- 		<%@include file="../Footer/Footer.jsp"%> --%>
-	<!-- 	</footer> -->
-
-	<%
+		
+	<div class="frame-wrapper">
+				<div class="frame">
+				
+				<div class="background">
+					<%
 	int notice_num, refer_num;
 	int rownum = 0, rownum2 = 0;
 	Connection conn = null;
@@ -80,9 +74,21 @@ request.setCharacterEncoding("utf-8");
 	++temp;
 	} %>
 	</div>
+				
+				</div>
+	
+	</div>
 
-	<div class="Title">공지 사항</div>
-	<div style="position: relative; top: 50px;">
+	<div class="frame2">
+		<div class="content-wrapper">
+				<div class="Title">공지 사항</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	<div style="position: relative; top: 50px; flex-shrink: 0;">
 
 		<h3 class="hrTitleText">총 <%=rownum %> 개의 게시물이 있습니다</h3>
 
@@ -138,5 +144,14 @@ request.setCharacterEncoding("utf-8");
 			</div>
 		</div>
 	</div>
+				
+				
+			</div>
+
+	
+	
+	<footer>
+			<%@include file="../Footer/Footer.jsp"%>
+		</footer>
 </body>
 </html>
