@@ -108,7 +108,7 @@ request.setCharacterEncoding("utf-8");
 							<th scope="col" class="th-title">제목</th>
 							<th scope="col" class="th-date">등록일</th>
 							<th scope="col" class="th-writer">작성자</th>
-							<th scope="col" class="th-seeNum">조회수</th>
+<!-- 							<th scope="col" class="th-seeNum">조회수</th> -->
 						</tr>
 					</thead>
 
@@ -129,7 +129,7 @@ request.setCharacterEncoding("utf-8");
 								href="./detailInfo/detailNotice.jsp?notice_num=<%=notice_num%>"><%=rs.getString("title")%></a></td>
 							<td><%=rs.getDate("notice_date")%></td>
 							<td><%=rs.getString("name")%></td>
-							<td><%=refer_num%></td>
+<%-- 							<td><%=refer_num%></td> --%>
 						</tr>
 
 					</tbody>
