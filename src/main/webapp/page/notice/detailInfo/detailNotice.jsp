@@ -15,8 +15,6 @@ request.setCharacterEncoding("utf-8");
 </head>
 <script type="text/javascript"> 
  	function closePopup() {
-
- 		//window.location.replace("../mainNotice.jsp");
  		window.close();
  		response.sendRedirect("../mainNotice.jsp");
  		

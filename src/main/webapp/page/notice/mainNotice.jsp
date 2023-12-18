@@ -113,8 +113,8 @@ request.setCharacterEncoding("utf-8");
 
 				<div class="container">
 					<form action="">
-<!-- 						<button id="btn_register" type="submit" class="btn_register" -->
-<!-- 							onclick="goPopup();">등록하기</button> -->
+						<!-- 						<button id="btn_register" type="submit" class="btn_register" -->
+						<!-- 							onclick="goPopup();">등록하기</button> -->
 						<button id="btn_register" type="submit" class="btn_register"
 							onclick="location=window.open('makeNewNotice.jsp')">등록하기</button>
 					</form>
@@ -144,8 +144,9 @@ request.setCharacterEncoding("utf-8");
 						<tbody>
 							<tr>
 								<td><%=displayedNoticeNum--%></td>
-<%-- 								<td><a href="./detailInfo/detailNotice.jsp?notice_num=<%=notice_num%>"><%=rs.getString("title")%></a></td> --%>
-<td><a href="" onclick="goDetailPopup(<%= notice_num%>)"> <%=rs.getString("title")%></a></td>
+								<%-- 								<td><a href="./detailInfo/detailNotice.jsp?notice_num=<%=notice_num%>"><%=rs.getString("title")%></a></td> --%>
+								<td><a href="" onclick="goDetailPopup(<%=notice_num%>)">
+										<%=rs.getString("title")%></a></td>
 								<td><%=rs.getDate("notice_date")%></td>
 								<td><%=rs.getString("name")%></td>
 								<%-- 							<td><%=refer_num%></td> --%>
