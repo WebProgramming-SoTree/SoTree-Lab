@@ -40,6 +40,15 @@
  .headerNotice .img_soTree {
     width: 158px;
     height: 134px;
+    animation: move_soTree 1s both linear infinite;
+  }
+  
+  @keyframes move_soTree {
+	  0% {transform: translateY(0px)translateX(0px);}
+	  25% {transform: translateY(5px)translateX(0px);}
+	  50% {transform: translateY(10px)translateX(0px);}
+	  75% {transform: translateY(5px)translateX(0px);}
+	  100% {transform: translateY(0px)translateX(0px);}
   }
 
   .titleNotice {
