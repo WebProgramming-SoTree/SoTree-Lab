@@ -12,8 +12,17 @@
 		ResultSet rs = null;
 		notice_num = Integer.parseInt(request.getParameter("notice_num"));
 		
-		javabean.UserInfo user_info = (javabean.UserInfo) session.getAttribute("userInfo");
-		int user_id = user_info.getid();
+		javabean.UserInfo user_info = (javabean.UserInfo) session.getAttribute("userInfo");	
+		if (user_info == null) {
+		%>
+		<script>
+        alert('로그인하지 않았습니다');
+        window.location.href = '../mainNotice.jsp';
+    </script>
+		<%
+	}
+	
+	int user_id = (user_info != null) ? user_info.getid() : 0;
 		
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
@@ -34,9 +43,10 @@
 			{
 		%>
 		
-		<center><h2>게시글 생성자가 아닙니다.</h2>
-			<a href="../mainNotice.jsp">뒤로</a>
-		</center>
+		<script>
+        alert('게시물 생성자가 아닙니다');
+        window.location.href = '../mainNotice.jsp';
+    </script>
 		<%
 			}
 			else

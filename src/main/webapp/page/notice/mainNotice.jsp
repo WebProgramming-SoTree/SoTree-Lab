@@ -11,7 +11,7 @@ request.setCharacterEncoding("utf-8");
 <link href="./mainNotice.css" rel="stylesheet" />
 <link rel="stylesheet" href="../Nav/Nav.css" />
 <link rel="stylesheet" href="../Footer/Footer.css" />
-<meta name="viewport" content="width=divice-width">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>공지사항</title>
 </head>
 <body>
