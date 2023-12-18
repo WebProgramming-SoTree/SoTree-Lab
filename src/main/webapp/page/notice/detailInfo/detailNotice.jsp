@@ -63,6 +63,7 @@ request.setCharacterEncoding("utf-8");
 
 			boardList.setNoticeNum(notice_num);
 			session.setAttribute("boardList", boardList);
+			out.println("notice_num: " + boardList.getNoticeNum());
 		%>
 		<table border="0" width="500">
 			<tr>
@@ -99,6 +100,8 @@ request.setCharacterEncoding("utf-8");
 			pstmt.setInt(1, new_pin_num);
 			pstmt.setInt(2, notice_num);
 			pstmt.executeUpdate();
+			
+			response.sendRedirect("../mainNotice.jsp");
 		} catch (SQLException e) {
 			out.println("SQL 오류입니다.:" + e.getMessage());
 		}
@@ -117,7 +120,8 @@ request.setCharacterEncoding("utf-8");
 
 		<a href="../modify/modifyNotice.jsp?notice_num=<%=notice_num%>">게시글수정</a> 
 		<a href="../modify/deleteNotice.jsp?notice_num=<%=notice_num%>">게시글 삭제</a> 
-		<a href="../mainNotice.jsp">게시글 목록 보기</a> <a href="?addPin=true">게시글 공지로 등록</a>
+		<a href="../mainNotice.jsp">게시글 목록 보기</a> 
+		<a href="?addPin=true">게시글 공지로 등록</a>
 
 	</center>
 </body>
